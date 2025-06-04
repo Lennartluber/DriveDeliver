@@ -4,10 +4,10 @@
 [ext_resource type="Script" uid="uid://bbajokkhlljkf" path="res://scenes/car_controller.gd" id="2_a2f0d"]
 [ext_resource type="Texture2D" uid="uid://l66rsvpg5ms3" path="res://2D TOP DOWN PIXEL CARS/Coupe/coupe_red.png" id="3_2puco"]
 [ext_resource type="Script" uid="uid://mg353le61aqf" path="res://scenes/camera_2d.gd" id="4_21yxg"]
-[ext_resource type="Texture2D" uid="uid://bxkdohlj7ixyq" path="res://PNG/Decor_Items/Puddle_02.png" id="5_82ue1"]
 [ext_resource type="PackedScene" uid="uid://m1e8ae8lwcpj" path="res://scenes/pipe.tscn" id="6_1kh8g"]
 [ext_resource type="PackedScene" uid="uid://bjj7x6a2ahyuu" path="res://scenes/container.tscn" id="7_xm70n"]
 [ext_resource type="PackedScene" uid="uid://dqnrpb5m2khgg" path="res://scenes/border.tscn" id="8_ge7yi"]
+[ext_resource type="PackedScene" uid="uid://bb080uud6ejn5" path="res://scenes/puddle_slip.tscn" id="8_mxtr1"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_epypp"]
 radius = 29.0
@@ -18,9 +18,9 @@ position = Vector2(-1, 0)
 
 [node name="TextureRect" type="TextureRect" parent="."]
 offset_left = -508.0
-offset_top = -921.0
+offset_top = -924.0
 offset_right = 2957.0
-offset_bottom = 2729.0
+offset_bottom = 2726.0
 texture = ExtResource("1_mxtr1")
 stretch_mode = 1
 
@@ -46,10 +46,6 @@ texture = ExtResource("3_2puco")
 position = Vector2(-137, -92)
 script = ExtResource("4_21yxg")
 target = NodePath("../car")
-
-[node name="Puddle02" type="Sprite2D" parent="."]
-position = Vector2(1613, 2401)
-texture = ExtResource("5_82ue1")
 
 [node name="Pipe" parent="." instance=ExtResource("6_1kh8g")]
 position = Vector2(1077, 2641)
@@ -78,7 +74,8 @@ position = Vector2(1220, 2135)
 position = Vector2(964, 2075)
 
 [node name="container4" parent="." instance=ExtResource("7_xm70n")]
-position = Vector2(1476, 2077)
+position = Vector2(1411, 2072)
+rotation = 1.5708
 
 [node name="border" parent="." instance=ExtResource("8_ge7yi")]
 position = Vector2(902, 2713)
@@ -200,22 +197,22 @@ position = Vector2(1226, -910)
 scale = Vector2(0.8, 0.8)
 
 [node name="border35" parent="." instance=ExtResource("8_ge7yi")]
-position = Vector2(1509, 209)
+position = Vector2(-120, -909)
 
 [node name="border36" parent="." instance=ExtResource("8_ge7yi")]
-position = Vector2(1338, 160)
+position = Vector2(392, -910)
 
 [node name="border37" parent="." instance=ExtResource("8_ge7yi")]
-position = Vector2(595, 14)
+position = Vector2(647, -911)
 
 [node name="border38" parent="." instance=ExtResource("8_ge7yi")]
-position = Vector2(498, -191)
+position = Vector2(903, -912)
 
 [node name="border39" parent="." instance=ExtResource("8_ge7yi")]
-position = Vector2(59, 213)
+position = Vector2(136, -908)
 
 [node name="border40" parent="." instance=ExtResource("8_ge7yi")]
-position = Vector2(1044, 312)
+position = Vector2(-377, -908)
 
 [node name="Pipe5" parent="." instance=ExtResource("6_1kh8g")]
 position = Vector2(1373, -836)
@@ -236,3 +233,76 @@ scale = Vector2(0.7, 0.7)
 position = Vector2(1076, -657)
 rotation = 1.5708
 scale = Vector2(0.7, 0.7)
+
+[node name="border41" parent="." instance=ExtResource("8_ge7yi")]
+position = Vector2(-493, -761)
+rotation = 1.5708
+
+[node name="border42" parent="." instance=ExtResource("8_ge7yi")]
+position = Vector2(-493, -505)
+rotation = 1.5708
+
+[node name="border43" parent="." instance=ExtResource("8_ge7yi")]
+position = Vector2(-494, -248)
+rotation = 1.5708
+
+[node name="border44" parent="." instance=ExtResource("8_ge7yi")]
+position = Vector2(-493, 9)
+rotation = 1.5708
+
+[node name="border45" parent="." instance=ExtResource("8_ge7yi")]
+position = Vector2(-493, 266)
+rotation = 1.5708
+
+[node name="border46" parent="." instance=ExtResource("8_ge7yi")]
+position = Vector2(-493, 523)
+rotation = 1.5708
+
+[node name="border47" parent="." instance=ExtResource("8_ge7yi")]
+position = Vector2(-493, 780)
+rotation = 1.5708
+
+[node name="border48" parent="." instance=ExtResource("8_ge7yi")]
+position = Vector2(-494, 1037)
+rotation = 1.5708
+
+[node name="border49" parent="." instance=ExtResource("8_ge7yi")]
+position = Vector2(-494, 1293)
+rotation = 1.5708
+
+[node name="border50" parent="." instance=ExtResource("8_ge7yi")]
+position = Vector2(-494, 1550)
+rotation = 1.5708
+
+[node name="border51" parent="." instance=ExtResource("8_ge7yi")]
+position = Vector2(-494, 1806)
+rotation = 1.5708
+
+[node name="border52" parent="." instance=ExtResource("8_ge7yi")]
+position = Vector2(-495, 2062)
+rotation = 1.5708
+
+[node name="border53" parent="." instance=ExtResource("8_ge7yi")]
+position = Vector2(-495, 2318)
+rotation = 1.5708
+
+[node name="border54" parent="." instance=ExtResource("8_ge7yi")]
+position = Vector2(-494, 2574)
+rotation = 1.5708
+
+[node name="container" parent="." instance=ExtResource("7_xm70n")]
+position = Vector2(1219, 2009)
+
+[node name="container5" parent="." instance=ExtResource("7_xm70n")]
+position = Vector2(1028, 1883)
+rotation = 1.5708
+
+[node name="PuddleSlip" parent="." instance=ExtResource("8_mxtr1")]
+position = Vector2(863, 2324)
+
+[node name="container6" parent="." instance=ExtResource("7_xm70n")]
+position = Vector2(908, 2631)
+
+[node name="container7" parent="." instance=ExtResource("7_xm70n")]
+position = Vector2(717, 2567)
+rotation = 1.5708
