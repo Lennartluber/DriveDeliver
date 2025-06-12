@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=3 uid="uid://c8cf8bm2yydqb"]
+
+[ext_resource type="Script" uid="uid://drrvsxykootsd" path="res://npc_car.gd" id="1_3m3sh"]
+[ext_resource type="Texture2D" uid="uid://dghkgphjunxmh" path="res://2D TOP DOWN PIXEL CARS/Truck/truck_blue.png" id="1_rn0le"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3m3sh"]
+size = Vector2(36, 79)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_til2w"]
+size = Vector2(36, 79)
+
+[node name="NPCcar" type="CharacterBody2D"]
+script = ExtResource("1_3m3sh")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_rn0le")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 0.5)
+shape = SubResource("RectangleShape2D_3m3sh")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, 0.5)
+shape = SubResource("RectangleShape2D_til2w")

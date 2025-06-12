@@ -12,6 +12,9 @@ var controlling = true
 var move_input = 0.0
 var turn_input = 0.0
 
+
+	
+
 func _physics_process(delta):
 	if controlling : 
 		
@@ -67,5 +70,25 @@ func _on_puddle_slip_body_exited(body: Node2D) -> void:
 	controlling = true
 
 
+func _on_spikes_body_entered(body: Node2D) -> void:
+	get_tree().reload_current_scene()
+
+
+func _on_spikes_2_body_entered(body: Node2D) -> void:
+	get_tree().reload_current_scene()
+
+
+func _on_spikes_3_body_entered(body: Node2D) -> void:
+	get_tree().reload_current_scene()
+
+
 func _on_area_2d_body_entered(body: Node2D) -> void:
-	pass # Replace with function body.
+	get_tree().reload_current_scene()
+
+
+func _on_area_2d_2_body_entered(body: Node2D) -> void:
+	get_tree().reload_current_scene()
+
+
+func _on_bomb_2_body_entered(body: Node2D) -> void:
+	get_tree().reload_current_scene()

@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://b4aj1m0ab3wag"]
+
+[ext_resource type="Texture2D" uid="uid://ch8taf4205tok" path="res://PNG/Decor_Items/Decor_Pipe_C_01.png" id="1_goob7"]
+
+[node name="StaticBody2D" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_goob7")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-66, -56, -66, 56, 24, 55, 28.5, 55, 44.5, 46, 46.9, 46, 55.9, 36, 57.3, 36, 66.4, 14, 68, 14, 68, -12.4, 65, -19.4, 65, -22.6, 58, -32.6, 58, -35, 42, -48.1, 42, -49.5, 26, -54.5, 26, -56)

@@ -1,49 +1,36 @@
-[gd_scene load_steps=10 format=3 uid="uid://d4cm57vspmiln"]
+[gd_scene load_steps=15 format=3 uid="uid://d4cm57vspmiln"]
 
 [ext_resource type="Texture2D" uid="uid://2ca6w4mgkqsb" path="res://PNG/Ground_Tile_01_C.png" id="1_mxtr1"]
-[ext_resource type="Script" uid="uid://bbajokkhlljkf" path="res://scenes/car_controller.gd" id="2_a2f0d"]
-[ext_resource type="Texture2D" uid="uid://l66rsvpg5ms3" path="res://2D TOP DOWN PIXEL CARS/Coupe/coupe_red.png" id="3_2puco"]
+[ext_resource type="PackedScene" uid="uid://by7pl6dwvmwtg" path="res://PlayerCar.tscn" id="2_mxtr1"]
 [ext_resource type="Script" uid="uid://mg353le61aqf" path="res://scenes/camera_2d.gd" id="4_21yxg"]
 [ext_resource type="PackedScene" uid="uid://m1e8ae8lwcpj" path="res://scenes/pipe.tscn" id="6_1kh8g"]
 [ext_resource type="PackedScene" uid="uid://bjj7x6a2ahyuu" path="res://scenes/container.tscn" id="7_xm70n"]
+[ext_resource type="PackedScene" uid="uid://xpfbbmd5hrq7" path="res://spikes.tscn" id="8_a2f0d"]
 [ext_resource type="PackedScene" uid="uid://dqnrpb5m2khgg" path="res://scenes/border.tscn" id="8_ge7yi"]
 [ext_resource type="PackedScene" uid="uid://bb080uud6ejn5" path="res://scenes/puddle_slip.tscn" id="8_mxtr1"]
-
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_epypp"]
-radius = 29.0
-height = 150.0
+[ext_resource type="PackedScene" uid="uid://m46td02qs40e" path="res://scenes/container red.tscn" id="9_a2f0d"]
+[ext_resource type="PackedScene" uid="uid://b4aj1m0ab3wag" path="res://scenes/PIPE 2.tscn" id="10_2puco"]
+[ext_resource type="PackedScene" uid="uid://bpq6b7l8sa36n" path="res://scenes/bomb.tscn" id="11_21yxg"]
+[ext_resource type="Texture2D" uid="uid://bhfbe8uepit8s" path="res://PNG/Decor_Items/Czech_Hdgehog_A.png" id="12_82ue1"]
+[ext_resource type="PackedScene" uid="uid://rhyv2vw0v1al" path="res://scenes/bomb_2.tscn" id="13_1kh8g"]
+[ext_resource type="PackedScene" uid="uid://c8cf8bm2yydqb" path="res://NPC car.tscn" id="14_xm70n"]
 
 [node name="Node2D" type="Node2D"]
 position = Vector2(-1, 0)
 
 [node name="TextureRect" type="TextureRect" parent="."]
-offset_left = -508.0
+offset_left = -509.0
 offset_top = -924.0
-offset_right = 2957.0
+offset_right = 2956.0
 offset_bottom = 2726.0
 texture = ExtResource("1_mxtr1")
 stretch_mode = 1
 
-[node name="car" type="CharacterBody2D" parent="."]
-z_index = 6
+[node name="car" parent="." instance=ExtResource("2_mxtr1")]
 position = Vector2(1225, 2617)
-rotation = 4.71239
-scale = Vector2(0.939194, 0.99818)
-script = ExtResource("2_a2f0d")
-metadata/_edit_group_ = true
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="car"]
-rotation = 1.57079
-shape = SubResource("CapsuleShape2D_epypp")
-
-[node name="Sprite2D" type="Sprite2D" parent="car"]
-position = Vector2(0.25, 0.25)
-rotation = 1.57079
-scale = Vector2(2, 1.98)
-texture = ExtResource("3_2puco")
 
 [node name="Camera2D" type="Camera2D" parent="." node_paths=PackedStringArray("target")]
-position = Vector2(-137, -92)
+position = Vector2(1229, 2626)
 script = ExtResource("4_21yxg")
 target = NodePath("../car")
 
@@ -298,7 +285,7 @@ position = Vector2(1028, 1883)
 rotation = 1.5708
 
 [node name="PuddleSlip" parent="." instance=ExtResource("8_mxtr1")]
-position = Vector2(863, 2324)
+position = Vector2(713, 2278)
 
 [node name="container6" parent="." instance=ExtResource("7_xm70n")]
 position = Vector2(908, 2631)
@@ -306,3 +293,129 @@ position = Vector2(908, 2631)
 [node name="container7" parent="." instance=ExtResource("7_xm70n")]
 position = Vector2(717, 2567)
 rotation = 1.5708
+
+[node name="spikes" parent="." instance=ExtResource("8_a2f0d")]
+position = Vector2(768, 2180)
+
+[node name="spikes2" parent="." instance=ExtResource("8_a2f0d")]
+position = Vector2(579, 2385)
+
+[node name="container red" parent="." instance=ExtResource("9_a2f0d")]
+position = Vector2(200, 2219)
+
+[node name="spikes3" parent="." instance=ExtResource("8_a2f0d")]
+position = Vector2(456, 2071)
+
+[node name="Pipe9" parent="." instance=ExtResource("6_1kh8g")]
+position = Vector2(239, 2412)
+rotation = 3.14159
+scale = Vector2(0.6, 0.6)
+
+[node name="Pipe10" parent="." instance=ExtResource("6_1kh8g")]
+position = Vector2(392, 2412)
+scale = Vector2(0.6, 0.6)
+
+[node name="container8" parent="." instance=ExtResource("7_xm70n")]
+position = Vector2(316, 2509)
+
+[node name="container9" parent="." instance=ExtResource("7_xm70n")]
+position = Vector2(317, 2635)
+
+[node name="Pipe11" parent="." instance=ExtResource("6_1kh8g")]
+position = Vector2(483, 2622)
+rotation = 1.5708
+scale = Vector2(0.6, 0.6)
+
+[node name="StaticBody2D" parent="." instance=ExtResource("10_2puco")]
+position = Vector2(483, 2506)
+rotation = 4.71239
+scale = Vector2(0.6, 0.6)
+metadata/_edit_group_ = true
+
+[node name="Pipe12" parent="." instance=ExtResource("6_1kh8g")]
+position = Vector2(149, 2622)
+rotation = 1.5708
+scale = Vector2(0.6, 0.6)
+
+[node name="StaticBody2D2" parent="." instance=ExtResource("10_2puco")]
+position = Vector2(149, 2506)
+rotation = 4.71239
+scale = Vector2(0.6, 0.6)
+
+[node name="Area2D" parent="." instance=ExtResource("11_21yxg")]
+position = Vector2(682, 1966)
+metadata/_edit_group_ = true
+
+[node name="CzechHdgehogA" type="Sprite2D" parent="."]
+position = Vector2(579, 2498)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("12_82ue1")
+
+[node name="CzechHdgehogA2" type="Sprite2D" parent="."]
+position = Vector2(579, 2624)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("12_82ue1")
+
+[node name="StaticBody2D3" parent="." instance=ExtResource("9_a2f0d")]
+position = Vector2(900, 1883)
+rotation = 1.5708
+
+[node name="StaticBody2D4" parent="." instance=ExtResource("9_a2f0d")]
+position = Vector2(707, 1690)
+
+[node name="StaticBody2D5" parent="." instance=ExtResource("9_a2f0d")]
+position = Vector2(963, 1690)
+
+[node name="container10" parent="." instance=ExtResource("7_xm70n")]
+position = Vector2(1220, 1885)
+
+[node name="StaticBody2D6" parent="." instance=ExtResource("9_a2f0d")]
+position = Vector2(-55, 2219)
+
+[node name="StaticBody2D7" parent="." instance=ExtResource("9_a2f0d")]
+position = Vector2(-181, 2347)
+
+[node name="StaticBody2D8" parent="." instance=ExtResource("9_a2f0d")]
+position = Vector2(-246, 2155)
+rotation = 1.5708
+
+[node name="bomb" parent="." instance=ExtResource("11_21yxg")]
+position = Vector2(-185, 2553)
+scale = Vector2(1.2, 1.2)
+metadata/_edit_group_ = true
+
+[node name="bomb2" parent="." instance=ExtResource("13_1kh8g")]
+position = Vector2(1593, 2323)
+rotation = 1.5708
+metadata/_edit_group_ = true
+
+[node name="container11" parent="." instance=ExtResource("7_xm70n")]
+position = Vector2(1541, 2636)
+
+[node name="Area2D2" parent="." instance=ExtResource("11_21yxg")]
+position = Vector2(1859, 2451)
+
+[node name="StaticBody2D9" parent="." instance=ExtResource("9_a2f0d")]
+position = Vector2(1939, 2186)
+
+[node name="StaticBody2D10" parent="." instance=ExtResource("9_a2f0d")]
+position = Vector2(2131, 2249)
+rotation = 1.5708
+
+[node name="start point" type="Node2D" parent="."]
+position = Vector2(566, 1665)
+
+[node name="end point" type="Node2D" parent="."]
+position = Vector2(-478, 1678)
+
+[node name="NPCcar" parent="." node_paths=PackedStringArray("start_point", "end_point") instance=ExtResource("14_xm70n")]
+start_point = NodePath("../start point")
+end_point = NodePath("../end point")
+
+[connection signal="body_entered" from="spikes" to="car" method="_on_spikes_body_entered"]
+[connection signal="body_entered" from="spikes2" to="car" method="_on_spikes_2_body_entered"]
+[connection signal="body_entered" from="spikes3" to="car" method="_on_spikes_3_body_entered"]
+[connection signal="body_entered" from="Area2D" to="car" method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="bomb" to="car" method="_on_area_2d_2_body_entered"]
+[connection signal="body_entered" from="bomb2" to="car" method="_on_bomb_2_body_entered"]
+[connection signal="body_entered" from="Area2D2" to="car" method="_on_area_2d_2_body_entered"]

@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://rhyv2vw0v1al"]
+
+[ext_resource type="Texture2D" uid="uid://wfgtddf5tail" path="res://PNG/Bombs/Sprites/Bomb_Idle_A_002.png" id="1_k2pdj"]
+
+[node name="bomb2" type="Area2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_k2pdj")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-19, -49.1, -19, -47, -22.9, -47, -49, -17.8, -49, -8.8, -63.2, -7, -71.5, -7, -79.5, -3, -81.3, -3, -82.4, -0.5, -78, 3.8, -78, 5.8, -51.1, 9, -48.7, 9, -47, 18.4, -47, 22.9, -24, 44.8, -24, 47, 22.9, 47, 49, 17.8, 49, 8.7, 63.2, 7, 72.5, 7, 80.5, 3, 82.4, 3, 83.4, 0.300003, 78, -4, 78, -5.8, 51.1, -9, 48.7, -9, 47, -18.4, 47, -22.9, 24, -44.9, 24, -46.9)

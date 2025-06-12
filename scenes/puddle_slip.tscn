@@ -1,8 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://bb080uud6ejn5"]
+[gd_scene load_steps=3 format=3 uid="uid://bb080uud6ejn5"]
 
+[ext_resource type="Script" uid="uid://daefjdjkmifmf" path="res://scenes/puddle_slip.gd" id="1_8xppp"]
 [ext_resource type="Texture2D" uid="uid://bgtk40cwqu7w2" path="res://PNG/Decor_Items/Puddle_05.png" id="1_qxeg3"]
 
 [node name="PuddleSlip" type="Area2D"]
+script = ExtResource("1_8xppp")
 metadata/_edit_group_ = true
 
 [node name="Puddle05" type="Sprite2D" parent="."]
@@ -11,3 +13,6 @@ texture = ExtResource("1_qxeg3")
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 position = Vector2(4, 5)
 polygon = PackedVector2Array(-29, -35.1, -29, -33.9, -53.2, -32, -59.4, -32, -95.4, -16, -98, -16, -103, -9.7, -103, 4.60001, -100, 9.5, -100, 12, -92, 18, -92, 19.4, -87.3, 21, -67.5, 21, -63, 23.2, -63, 25.2, -41.8, 23, -34.4, 23, -6, 28.6, -6, 30.5, 9, 27, 10.3, 27, 16, 31.9, 16, 34, 79, 33, 94.8, 33, 100.8, 27, 103, 27, 103, 9, 99, 6, 99, 4.2, 63.1, 1, 61.1, 1, 58, -4.5, 58, -5.1, 64, -10.1, 64, -22.1, 58, -26.1, 58, -27.7, 30, -31.8, 30, -32.9)
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]
