@@ -10,6 +10,7 @@ size = Vector2(36, 79)
 size = Vector2(36, 79)
 
 [node name="NPCcar" type="CharacterBody2D"]
+scale = Vector2(2.3, 2.3)
 script = ExtResource("1_3m3sh")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://d4cm57vspmiln"]
+[gd_scene load_steps=16 format=3 uid="uid://d4cm57vspmiln"]
 
 [ext_resource type="Texture2D" uid="uid://2ca6w4mgkqsb" path="res://PNG/Ground_Tile_01_C.png" id="1_mxtr1"]
 [ext_resource type="PackedScene" uid="uid://by7pl6dwvmwtg" path="res://PlayerCar.tscn" id="2_mxtr1"]
@@ -10,10 +10,11 @@
 [ext_resource type="PackedScene" uid="uid://bb080uud6ejn5" path="res://scenes/puddle_slip.tscn" id="8_mxtr1"]
 [ext_resource type="PackedScene" uid="uid://m46td02qs40e" path="res://scenes/container red.tscn" id="9_a2f0d"]
 [ext_resource type="PackedScene" uid="uid://b4aj1m0ab3wag" path="res://scenes/PIPE 2.tscn" id="10_2puco"]
-[ext_resource type="PackedScene" uid="uid://bpq6b7l8sa36n" path="res://scenes/bomb.tscn" id="11_21yxg"]
+[ext_resource type="PackedScene" uid="uid://bpq6b7l8sa36n" path="res://bomb.tscn" id="11_21yxg"]
 [ext_resource type="Texture2D" uid="uid://bhfbe8uepit8s" path="res://PNG/Decor_Items/Czech_Hdgehog_A.png" id="12_82ue1"]
 [ext_resource type="PackedScene" uid="uid://rhyv2vw0v1al" path="res://scenes/bomb_2.tscn" id="13_1kh8g"]
 [ext_resource type="PackedScene" uid="uid://c8cf8bm2yydqb" path="res://NPC car.tscn" id="14_xm70n"]
+[ext_resource type="Texture2D" uid="uid://c3mr58v7x2dtg" path="res://PNG/Decor_Items/Container_A.png" id="15_ge7yi"]
 
 [node name="Node2D" type="Node2D"]
 position = Vector2(-1, 0)
@@ -412,6 +413,29 @@ position = Vector2(-478, 1678)
 start_point = NodePath("../start point")
 end_point = NodePath("../end point")
 
+[node name="spikes4" parent="." instance=ExtResource("8_a2f0d")]
+position = Vector2(1611, 2026)
+
+[node name="StaticBody2D11" parent="." instance=ExtResource("9_a2f0d")]
+position = Vector2(2066, 2057)
+
+[node name="StaticBody2D12" parent="." instance=ExtResource("9_a2f0d")]
+position = Vector2(1811, 2057)
+
+[node name="StaticBody2D13" parent="." instance=ExtResource("9_a2f0d")]
+position = Vector2(2195, 2441)
+
+[node name="StaticBody2D14" parent="." instance=ExtResource("9_a2f0d")]
+position = Vector2(2259, 2250)
+rotation = 1.5708
+
+[node name="bomb3" parent="." instance=ExtResource("13_1kh8g")]
+position = Vector2(2196, 2559)
+
+[node name="ContainerA" type="Sprite2D" parent="."]
+position = Vector2(1476, 1880)
+texture = ExtResource("15_ge7yi")
+
 [connection signal="body_entered" from="spikes" to="car" method="_on_spikes_body_entered"]
 [connection signal="body_entered" from="spikes2" to="car" method="_on_spikes_2_body_entered"]
 [connection signal="body_entered" from="spikes3" to="car" method="_on_spikes_3_body_entered"]
@@ -419,3 +443,5 @@ end_point = NodePath("../end point")
 [connection signal="body_entered" from="bomb" to="car" method="_on_area_2d_2_body_entered"]
 [connection signal="body_entered" from="bomb2" to="car" method="_on_bomb_2_body_entered"]
 [connection signal="body_entered" from="Area2D2" to="car" method="_on_area_2d_2_body_entered"]
+[connection signal="body_entered" from="spikes4" to="car" method="_on_spikes_4_body_entered"]
+[connection signal="body_entered" from="bomb3" to="car" method="_on_bomb_3_body_entered"]
