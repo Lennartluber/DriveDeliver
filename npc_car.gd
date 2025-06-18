@@ -1,6 +1,7 @@
 extends CharacterBody2D
 
-@export var speed: float = 200.0  # Speed of the NPC car
+@export var speed: float = 600
+  # Speed of the NPC car
 @export var start_point: Node2D  # Reference to the start point
 @export var end_point: Node2D    # Reference to the end point
 
@@ -32,8 +33,3 @@ func respawn():
 	# Reset position to start point
 	global_position = initial_position
 	velocity = Vector2.ZERO
-
-func _on_area_2d_body_entered(body):
-	# Check if the colliding body is the player
-	if body.is_in_group("player"):
-		body.die()  # Call the player's die function

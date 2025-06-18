@@ -17,23 +17,23 @@
 [ext_resource type="Texture2D" uid="uid://c3mr58v7x2dtg" path="res://PNG/Decor_Items/Container_A.png" id="15_ge7yi"]
 
 [node name="Node2D" type="Node2D"]
-position = Vector2(-1, 0)
 
 [node name="TextureRect" type="TextureRect" parent="."]
-offset_left = -509.0
+offset_left = -507.0
 offset_top = -924.0
-offset_right = 2956.0
+offset_right = 2958.0
 offset_bottom = 2726.0
 texture = ExtResource("1_mxtr1")
 stretch_mode = 1
 
 [node name="car" parent="." instance=ExtResource("2_mxtr1")]
-position = Vector2(1225, 2617)
+position = Vector2(1229, 2626)
 
 [node name="Camera2D" type="Camera2D" parent="." node_paths=PackedStringArray("target")]
 position = Vector2(1229, 2626)
 script = ExtResource("4_21yxg")
 target = NodePath("../car")
+metadata/_edit_lock_ = true
 
 [node name="Pipe" parent="." instance=ExtResource("6_1kh8g")]
 position = Vector2(1077, 2641)
@@ -55,152 +55,245 @@ position = Vector2(1373, 2462)
 rotation = 4.71239
 scale = Vector2(0.7, 0.7)
 
-[node name="container2" parent="." instance=ExtResource("7_xm70n")]
+[node name="Containers" type="Node2D" parent="."]
+
+[node name="container2" parent="Containers" instance=ExtResource("7_xm70n")]
 position = Vector2(1220, 2135)
 
-[node name="container3" parent="." instance=ExtResource("7_xm70n")]
+[node name="container3" parent="Containers" instance=ExtResource("7_xm70n")]
 position = Vector2(964, 2075)
 
-[node name="container4" parent="." instance=ExtResource("7_xm70n")]
+[node name="container4" parent="Containers" instance=ExtResource("7_xm70n")]
 position = Vector2(1411, 2072)
 rotation = 1.5708
 
-[node name="border" parent="." instance=ExtResource("8_ge7yi")]
+[node name="container" parent="Containers" instance=ExtResource("7_xm70n")]
+position = Vector2(1219, 2009)
+
+[node name="container5" parent="Containers" instance=ExtResource("7_xm70n")]
+position = Vector2(1028, 1883)
+rotation = 1.5708
+
+[node name="container6" parent="Containers" instance=ExtResource("7_xm70n")]
+position = Vector2(908, 2631)
+
+[node name="container7" parent="Containers" instance=ExtResource("7_xm70n")]
+position = Vector2(717, 2567)
+rotation = 1.5708
+
+[node name="container red" parent="Containers" instance=ExtResource("9_a2f0d")]
+position = Vector2(200, 2219)
+
+[node name="container8" parent="Containers" instance=ExtResource("7_xm70n")]
+position = Vector2(316, 2509)
+
+[node name="container9" parent="Containers" instance=ExtResource("7_xm70n")]
+position = Vector2(317, 2635)
+
+[node name="container10" parent="Containers" instance=ExtResource("7_xm70n")]
+position = Vector2(1220, 1885)
+
+[node name="container11" parent="Containers" instance=ExtResource("7_xm70n")]
+position = Vector2(1541, 2636)
+
+[node name="ContainerA" type="Sprite2D" parent="Containers"]
+position = Vector2(1476, 1880)
+texture = ExtResource("15_ge7yi")
+
+[node name="Borders" type="Node2D" parent="."]
+
+[node name="border" parent="Borders" instance=ExtResource("8_ge7yi")]
 position = Vector2(902, 2713)
 
-[node name="border2" parent="." instance=ExtResource("8_ge7yi")]
+[node name="border2" parent="Borders" instance=ExtResource("8_ge7yi")]
 position = Vector2(645, 2713)
 
-[node name="border3" parent="." instance=ExtResource("8_ge7yi")]
+[node name="border3" parent="Borders" instance=ExtResource("8_ge7yi")]
 position = Vector2(387, 2712)
 
-[node name="border4" parent="." instance=ExtResource("8_ge7yi")]
+[node name="border4" parent="Borders" instance=ExtResource("8_ge7yi")]
 position = Vector2(1226, 2712)
 scale = Vector2(0.8, 0.8)
 
-[node name="border5" parent="." instance=ExtResource("8_ge7yi")]
+[node name="border5" parent="Borders" instance=ExtResource("8_ge7yi")]
 position = Vector2(131, 2713)
 
-[node name="border6" parent="." instance=ExtResource("8_ge7yi")]
+[node name="border6" parent="Borders" instance=ExtResource("8_ge7yi")]
 position = Vector2(-125, 2713)
 scale = Vector2(1, 1.05446)
 
-[node name="border7" parent="." instance=ExtResource("8_ge7yi")]
+[node name="border7" parent="Borders" instance=ExtResource("8_ge7yi")]
 position = Vector2(-380, 2713)
 
-[node name="border8" parent="." instance=ExtResource("8_ge7yi")]
+[node name="border8" parent="Borders" instance=ExtResource("8_ge7yi")]
 position = Vector2(1548, 2714)
 
-[node name="border9" parent="." instance=ExtResource("8_ge7yi")]
+[node name="border9" parent="Borders" instance=ExtResource("8_ge7yi")]
 position = Vector2(1804, 2714)
 
-[node name="border10" parent="." instance=ExtResource("8_ge7yi")]
+[node name="border10" parent="Borders" instance=ExtResource("8_ge7yi")]
 position = Vector2(2060, 2715)
 
-[node name="border11" parent="." instance=ExtResource("8_ge7yi")]
+[node name="border11" parent="Borders" instance=ExtResource("8_ge7yi")]
 position = Vector2(2316, 2715)
 
-[node name="border12" parent="." instance=ExtResource("8_ge7yi")]
+[node name="border12" parent="Borders" instance=ExtResource("8_ge7yi")]
 position = Vector2(2572, 2713)
 
-[node name="border13" parent="." instance=ExtResource("8_ge7yi")]
+[node name="border13" parent="Borders" instance=ExtResource("8_ge7yi")]
 position = Vector2(2827, 2713)
 
-[node name="border14" parent="." instance=ExtResource("8_ge7yi")]
+[node name="border14" parent="Borders" instance=ExtResource("8_ge7yi")]
 position = Vector2(2945, 2570)
 rotation = 1.5708
 
-[node name="border15" parent="." instance=ExtResource("8_ge7yi")]
+[node name="border15" parent="Borders" instance=ExtResource("8_ge7yi")]
 position = Vector2(2945, 2314)
 rotation = 1.5708
 
-[node name="border16" parent="." instance=ExtResource("8_ge7yi")]
+[node name="border16" parent="Borders" instance=ExtResource("8_ge7yi")]
 position = Vector2(2945, 2057)
 rotation = 1.5708
 
-[node name="border17" parent="." instance=ExtResource("8_ge7yi")]
+[node name="border17" parent="Borders" instance=ExtResource("8_ge7yi")]
 position = Vector2(2945, 1800)
 rotation = 1.5708
 
-[node name="border18" parent="." instance=ExtResource("8_ge7yi")]
+[node name="border18" parent="Borders" instance=ExtResource("8_ge7yi")]
 position = Vector2(2946, 1543)
 rotation = 1.5708
 
-[node name="border19" parent="." instance=ExtResource("8_ge7yi")]
+[node name="border19" parent="Borders" instance=ExtResource("8_ge7yi")]
 position = Vector2(2946, 1288)
 rotation = 1.5708
 
-[node name="border20" parent="." instance=ExtResource("8_ge7yi")]
+[node name="border20" parent="Borders" instance=ExtResource("8_ge7yi")]
 position = Vector2(2947, 1031)
 rotation = 1.5708
 
-[node name="border21" parent="." instance=ExtResource("8_ge7yi")]
+[node name="border21" parent="Borders" instance=ExtResource("8_ge7yi")]
 position = Vector2(2947, 774)
 rotation = 1.5708
 
-[node name="border22" parent="." instance=ExtResource("8_ge7yi")]
+[node name="border22" parent="Borders" instance=ExtResource("8_ge7yi")]
 position = Vector2(2947, 517)
 rotation = 1.5708
 
-[node name="border23" parent="." instance=ExtResource("8_ge7yi")]
+[node name="border23" parent="Borders" instance=ExtResource("8_ge7yi")]
 position = Vector2(2948, 262)
 rotation = 1.5708
 
-[node name="border24" parent="." instance=ExtResource("8_ge7yi")]
+[node name="border24" parent="Borders" instance=ExtResource("8_ge7yi")]
 position = Vector2(2947, 6)
 rotation = 1.5708
 
-[node name="border25" parent="." instance=ExtResource("8_ge7yi")]
+[node name="border25" parent="Borders" instance=ExtResource("8_ge7yi")]
 position = Vector2(2947, -250)
 rotation = 1.5708
 
-[node name="border26" parent="." instance=ExtResource("8_ge7yi")]
+[node name="border26" parent="Borders" instance=ExtResource("8_ge7yi")]
 position = Vector2(2947, -507)
 rotation = 1.5708
 
-[node name="border27" parent="." instance=ExtResource("8_ge7yi")]
+[node name="border27" parent="Borders" instance=ExtResource("8_ge7yi")]
 position = Vector2(2947, -762)
 rotation = 1.5708
 
-[node name="border28" parent="." instance=ExtResource("8_ge7yi")]
+[node name="border28" parent="Borders" instance=ExtResource("8_ge7yi")]
 position = Vector2(2832, -910)
 
-[node name="border29" parent="." instance=ExtResource("8_ge7yi")]
+[node name="border29" parent="Borders" instance=ExtResource("8_ge7yi")]
 position = Vector2(2576, -910)
 
-[node name="border30" parent="." instance=ExtResource("8_ge7yi")]
+[node name="border30" parent="Borders" instance=ExtResource("8_ge7yi")]
 position = Vector2(2319, -911)
 
-[node name="border31" parent="." instance=ExtResource("8_ge7yi")]
+[node name="border31" parent="Borders" instance=ExtResource("8_ge7yi")]
 position = Vector2(2062, -912)
 
-[node name="border32" parent="." instance=ExtResource("8_ge7yi")]
+[node name="border32" parent="Borders" instance=ExtResource("8_ge7yi")]
 position = Vector2(1805, -912)
 
-[node name="border33" parent="." instance=ExtResource("8_ge7yi")]
+[node name="border33" parent="Borders" instance=ExtResource("8_ge7yi")]
 position = Vector2(1548, -912)
 
-[node name="border34" parent="." instance=ExtResource("8_ge7yi")]
+[node name="border34" parent="Borders" instance=ExtResource("8_ge7yi")]
 position = Vector2(1226, -910)
 scale = Vector2(0.8, 0.8)
 
-[node name="border35" parent="." instance=ExtResource("8_ge7yi")]
+[node name="border35" parent="Borders" instance=ExtResource("8_ge7yi")]
 position = Vector2(-120, -909)
 
-[node name="border36" parent="." instance=ExtResource("8_ge7yi")]
+[node name="border36" parent="Borders" instance=ExtResource("8_ge7yi")]
 position = Vector2(392, -910)
 
-[node name="border37" parent="." instance=ExtResource("8_ge7yi")]
+[node name="border37" parent="Borders" instance=ExtResource("8_ge7yi")]
 position = Vector2(647, -911)
 
-[node name="border38" parent="." instance=ExtResource("8_ge7yi")]
+[node name="border38" parent="Borders" instance=ExtResource("8_ge7yi")]
 position = Vector2(903, -912)
 
-[node name="border39" parent="." instance=ExtResource("8_ge7yi")]
+[node name="border39" parent="Borders" instance=ExtResource("8_ge7yi")]
 position = Vector2(136, -908)
 
-[node name="border40" parent="." instance=ExtResource("8_ge7yi")]
+[node name="border40" parent="Borders" instance=ExtResource("8_ge7yi")]
 position = Vector2(-377, -908)
+
+[node name="border41" parent="Borders" instance=ExtResource("8_ge7yi")]
+position = Vector2(-493, -761)
+rotation = 1.5708
+
+[node name="border42" parent="Borders" instance=ExtResource("8_ge7yi")]
+position = Vector2(-493, -505)
+rotation = 1.5708
+
+[node name="border43" parent="Borders" instance=ExtResource("8_ge7yi")]
+position = Vector2(-494, -248)
+rotation = 1.5708
+
+[node name="border44" parent="Borders" instance=ExtResource("8_ge7yi")]
+position = Vector2(-493, 9)
+rotation = 1.5708
+
+[node name="border45" parent="Borders" instance=ExtResource("8_ge7yi")]
+position = Vector2(-493, 266)
+rotation = 1.5708
+
+[node name="border46" parent="Borders" instance=ExtResource("8_ge7yi")]
+position = Vector2(-493, 523)
+rotation = 1.5708
+
+[node name="border47" parent="Borders" instance=ExtResource("8_ge7yi")]
+position = Vector2(-493, 780)
+rotation = 1.5708
+
+[node name="border48" parent="Borders" instance=ExtResource("8_ge7yi")]
+position = Vector2(-494, 1037)
+rotation = 1.5708
+
+[node name="border49" parent="Borders" instance=ExtResource("8_ge7yi")]
+position = Vector2(-494, 1293)
+rotation = 1.5708
+
+[node name="border50" parent="Borders" instance=ExtResource("8_ge7yi")]
+position = Vector2(-494, 1550)
+rotation = 1.5708
+
+[node name="border51" parent="Borders" instance=ExtResource("8_ge7yi")]
+position = Vector2(-494, 1806)
+rotation = 1.5708
+
+[node name="border52" parent="Borders" instance=ExtResource("8_ge7yi")]
+position = Vector2(-495, 2062)
+rotation = 1.5708
+
+[node name="border53" parent="Borders" instance=ExtResource("8_ge7yi")]
+position = Vector2(-495, 2318)
+rotation = 1.5708
+
+[node name="border54" parent="Borders" instance=ExtResource("8_ge7yi")]
+position = Vector2(-494, 2574)
+rotation = 1.5708
 
 [node name="Pipe5" parent="." instance=ExtResource("6_1kh8g")]
 position = Vector2(1373, -836)
@@ -222,87 +315,14 @@ position = Vector2(1076, -657)
 rotation = 1.5708
 scale = Vector2(0.7, 0.7)
 
-[node name="border41" parent="." instance=ExtResource("8_ge7yi")]
-position = Vector2(-493, -761)
-rotation = 1.5708
-
-[node name="border42" parent="." instance=ExtResource("8_ge7yi")]
-position = Vector2(-493, -505)
-rotation = 1.5708
-
-[node name="border43" parent="." instance=ExtResource("8_ge7yi")]
-position = Vector2(-494, -248)
-rotation = 1.5708
-
-[node name="border44" parent="." instance=ExtResource("8_ge7yi")]
-position = Vector2(-493, 9)
-rotation = 1.5708
-
-[node name="border45" parent="." instance=ExtResource("8_ge7yi")]
-position = Vector2(-493, 266)
-rotation = 1.5708
-
-[node name="border46" parent="." instance=ExtResource("8_ge7yi")]
-position = Vector2(-493, 523)
-rotation = 1.5708
-
-[node name="border47" parent="." instance=ExtResource("8_ge7yi")]
-position = Vector2(-493, 780)
-rotation = 1.5708
-
-[node name="border48" parent="." instance=ExtResource("8_ge7yi")]
-position = Vector2(-494, 1037)
-rotation = 1.5708
-
-[node name="border49" parent="." instance=ExtResource("8_ge7yi")]
-position = Vector2(-494, 1293)
-rotation = 1.5708
-
-[node name="border50" parent="." instance=ExtResource("8_ge7yi")]
-position = Vector2(-494, 1550)
-rotation = 1.5708
-
-[node name="border51" parent="." instance=ExtResource("8_ge7yi")]
-position = Vector2(-494, 1806)
-rotation = 1.5708
-
-[node name="border52" parent="." instance=ExtResource("8_ge7yi")]
-position = Vector2(-495, 2062)
-rotation = 1.5708
-
-[node name="border53" parent="." instance=ExtResource("8_ge7yi")]
-position = Vector2(-495, 2318)
-rotation = 1.5708
-
-[node name="border54" parent="." instance=ExtResource("8_ge7yi")]
-position = Vector2(-494, 2574)
-rotation = 1.5708
-
-[node name="container" parent="." instance=ExtResource("7_xm70n")]
-position = Vector2(1219, 2009)
-
-[node name="container5" parent="." instance=ExtResource("7_xm70n")]
-position = Vector2(1028, 1883)
-rotation = 1.5708
-
 [node name="PuddleSlip" parent="." instance=ExtResource("8_mxtr1")]
 position = Vector2(713, 2278)
-
-[node name="container6" parent="." instance=ExtResource("7_xm70n")]
-position = Vector2(908, 2631)
-
-[node name="container7" parent="." instance=ExtResource("7_xm70n")]
-position = Vector2(717, 2567)
-rotation = 1.5708
 
 [node name="spikes" parent="." instance=ExtResource("8_a2f0d")]
 position = Vector2(768, 2180)
 
 [node name="spikes2" parent="." instance=ExtResource("8_a2f0d")]
 position = Vector2(579, 2385)
-
-[node name="container red" parent="." instance=ExtResource("9_a2f0d")]
-position = Vector2(200, 2219)
 
 [node name="spikes3" parent="." instance=ExtResource("8_a2f0d")]
 position = Vector2(456, 2071)
@@ -315,12 +335,6 @@ scale = Vector2(0.6, 0.6)
 [node name="Pipe10" parent="." instance=ExtResource("6_1kh8g")]
 position = Vector2(392, 2412)
 scale = Vector2(0.6, 0.6)
-
-[node name="container8" parent="." instance=ExtResource("7_xm70n")]
-position = Vector2(316, 2509)
-
-[node name="container9" parent="." instance=ExtResource("7_xm70n")]
-position = Vector2(317, 2635)
 
 [node name="Pipe11" parent="." instance=ExtResource("6_1kh8g")]
 position = Vector2(483, 2622)
@@ -367,9 +381,6 @@ position = Vector2(707, 1690)
 [node name="StaticBody2D5" parent="." instance=ExtResource("9_a2f0d")]
 position = Vector2(963, 1690)
 
-[node name="container10" parent="." instance=ExtResource("7_xm70n")]
-position = Vector2(1220, 1885)
-
 [node name="StaticBody2D6" parent="." instance=ExtResource("9_a2f0d")]
 position = Vector2(-55, 2219)
 
@@ -390,9 +401,6 @@ position = Vector2(1593, 2323)
 rotation = 1.5708
 metadata/_edit_group_ = true
 
-[node name="container11" parent="." instance=ExtResource("7_xm70n")]
-position = Vector2(1541, 2636)
-
 [node name="Area2D2" parent="." instance=ExtResource("11_21yxg")]
 position = Vector2(1859, 2451)
 
@@ -404,14 +412,10 @@ position = Vector2(2131, 2249)
 rotation = 1.5708
 
 [node name="start point" type="Node2D" parent="."]
-position = Vector2(566, 1665)
+position = Vector2(478, 1665)
 
 [node name="end point" type="Node2D" parent="."]
-position = Vector2(-478, 1678)
-
-[node name="NPCcar" parent="." node_paths=PackedStringArray("start_point", "end_point") instance=ExtResource("14_xm70n")]
-start_point = NodePath("../start point")
-end_point = NodePath("../end point")
+position = Vector2(-382, 1678)
 
 [node name="spikes4" parent="." instance=ExtResource("8_a2f0d")]
 position = Vector2(1611, 2026)
@@ -432,9 +436,11 @@ rotation = 1.5708
 [node name="bomb3" parent="." instance=ExtResource("13_1kh8g")]
 position = Vector2(2196, 2559)
 
-[node name="ContainerA" type="Sprite2D" parent="."]
-position = Vector2(1476, 1880)
-texture = ExtResource("15_ge7yi")
+[node name="NPCcar" parent="." node_paths=PackedStringArray("start_point", "end_point") instance=ExtResource("14_xm70n")]
+position = Vector2(434, 1668)
+rotation = 3.14159
+start_point = NodePath("../start point")
+end_point = NodePath("../end point")
 
 [connection signal="body_entered" from="spikes" to="car" method="_on_spikes_body_entered"]
 [connection signal="body_entered" from="spikes2" to="car" method="_on_spikes_2_body_entered"]
