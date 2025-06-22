@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://d4cm57vspmiln"]
+[gd_scene load_steps=17 format=3 uid="uid://d4cm57vspmiln"]
 
 [ext_resource type="Texture2D" uid="uid://2ca6w4mgkqsb" path="res://PNG/Ground_Tile_01_C.png" id="1_mxtr1"]
 [ext_resource type="PackedScene" uid="uid://by7pl6dwvmwtg" path="res://PlayerCar.tscn" id="2_mxtr1"]
@@ -15,14 +15,15 @@
 [ext_resource type="PackedScene" uid="uid://rhyv2vw0v1al" path="res://scenes/bomb_2.tscn" id="13_1kh8g"]
 [ext_resource type="PackedScene" uid="uid://c8cf8bm2yydqb" path="res://NPC car.tscn" id="14_xm70n"]
 [ext_resource type="Texture2D" uid="uid://c3mr58v7x2dtg" path="res://PNG/Decor_Items/Container_A.png" id="15_ge7yi"]
+[ext_resource type="PackedScene" uid="uid://chdcb07ohipsr" path="res://scenes/blast_hole.tscn" id="16_xdopa"]
 
 [node name="Node2D" type="Node2D"]
 
 [node name="TextureRect" type="TextureRect" parent="."]
-offset_left = -507.0
-offset_top = -924.0
-offset_right = 2958.0
-offset_bottom = 2726.0
+offset_left = -497.0
+offset_top = -950.0
+offset_right = 2968.0
+offset_bottom = 2700.0
 texture = ExtResource("1_mxtr1")
 stretch_mode = 1
 
@@ -218,7 +219,7 @@ position = Vector2(1805, -912)
 position = Vector2(1548, -912)
 
 [node name="border34" parent="Borders" instance=ExtResource("8_ge7yi")]
-position = Vector2(1226, -910)
+position = Vector2(1225, -910)
 scale = Vector2(0.8, 0.8)
 
 [node name="border35" parent="Borders" instance=ExtResource("8_ge7yi")]
@@ -294,6 +295,36 @@ rotation = 1.5708
 [node name="border54" parent="Borders" instance=ExtResource("8_ge7yi")]
 position = Vector2(-494, 2574)
 rotation = 1.5708
+
+[node name="container" parent="Borders" instance=ExtResource("7_xm70n")]
+position = Vector2(1225, 638)
+
+[node name="container2" parent="Borders" instance=ExtResource("7_xm70n")]
+position = Vector2(1649, 1059)
+
+[node name="container3" parent="Borders" instance=ExtResource("7_xm70n")]
+position = Vector2(2277, 1061)
+
+[node name="container4" parent="Borders" instance=ExtResource("7_xm70n")]
+position = Vector2(2142, 936)
+
+[node name="container5" parent="Borders" instance=ExtResource("7_xm70n")]
+position = Vector2(1480, 933)
+
+[node name="container6" parent="Borders" instance=ExtResource("7_xm70n")]
+position = Vector2(967, 933)
+
+[node name="container7" parent="Borders" instance=ExtResource("7_xm70n")]
+position = Vector2(1224, 933)
+
+[node name="container8" parent="Borders" instance=ExtResource("7_xm70n")]
+position = Vector2(799, 1059)
+
+[node name="container9" parent="Borders" instance=ExtResource("7_xm70n")]
+position = Vector2(611, 1185)
+
+[node name="container10" parent="Borders" instance=ExtResource("7_xm70n")]
+position = Vector2(564, 1310)
 
 [node name="Pipe5" parent="." instance=ExtResource("6_1kh8g")]
 position = Vector2(1373, -836)
@@ -442,6 +473,80 @@ rotation = 3.14159
 start_point = NodePath("../start point")
 end_point = NodePath("../end point")
 
+[node name="Pipe13" parent="." instance=ExtResource("6_1kh8g")]
+position = Vector2(2411, 2442)
+scale = Vector2(0.7, 0.7)
+
+[node name="StaticBody2D15" parent="." instance=ExtResource("10_2puco")]
+position = Vector2(2545, 2442)
+scale = Vector2(0.7, 0.7)
+
+[node name="StaticBody2D16" parent="." instance=ExtResource("9_a2f0d")]
+position = Vector2(2804, 2181)
+
+[node name="spikes5" parent="." instance=ExtResource("8_a2f0d")]
+position = Vector2(2249, 2064)
+
+[node name="blast hole" parent="." instance=ExtResource("16_xdopa")]
+position = Vector2(2502, 1871)
+scale = Vector2(1.5, 1.5)
+metadata/_edit_group_ = true
+
+[node name="StaticBody2D17" parent="." instance=ExtResource("9_a2f0d")]
+position = Vector2(2865, 1989)
+rotation = 1.5708
+
+[node name="container" parent="." instance=ExtResource("7_xm70n")]
+position = Vector2(1811, 1929)
+
+[node name="container2" parent="." instance=ExtResource("7_xm70n")]
+position = Vector2(2067, 1930)
+
+[node name="Pipe14" parent="." instance=ExtResource("6_1kh8g")]
+position = Vector2(2849, 1594)
+scale = Vector2(0.7, 0.7)
+
+[node name="Pipe15" parent="." instance=ExtResource("6_1kh8g")]
+position = Vector2(2491, 1594)
+scale = Vector2(0.7, 0.7)
+
+[node name="Pipe16" parent="." instance=ExtResource("6_1kh8g")]
+position = Vector2(2670, 1594)
+scale = Vector2(0.7, 0.7)
+
+[node name="Pipe17" parent="." instance=ExtResource("6_1kh8g")]
+position = Vector2(2312, 1594)
+scale = Vector2(0.7, 0.7)
+
+[node name="StaticBody2D18" parent="." instance=ExtResource("10_2puco")]
+position = Vector2(2178, 1594)
+rotation = 3.14159
+scale = Vector2(0.7, 0.7)
+
+[node name="container3" parent="." instance=ExtResource("7_xm70n")]
+position = Vector2(2428, 1314)
+
+[node name="container4" parent="." instance=ExtResource("7_xm70n")]
+position = Vector2(2378, 1187)
+
+[node name="container5" parent="." instance=ExtResource("7_xm70n")]
+position = Vector2(1892, 1312)
+
+[node name="container6" parent="." instance=ExtResource("7_xm70n")]
+position = Vector2(1839, 1186)
+
+[node name="container7" parent="." instance=ExtResource("7_xm70n")]
+position = Vector2(76, 1185)
+
+[node name="container8" parent="." instance=ExtResource("7_xm70n")]
+position = Vector2(25, 1311)
+
+[node name="container9" parent="." instance=ExtResource("7_xm70n")]
+position = Vector2(175, 1059)
+
+[node name="container10" parent="." instance=ExtResource("7_xm70n")]
+position = Vector2(310, 933)
+
 [connection signal="body_entered" from="spikes" to="car" method="_on_spikes_body_entered"]
 [connection signal="body_entered" from="spikes2" to="car" method="_on_spikes_2_body_entered"]
 [connection signal="body_entered" from="spikes3" to="car" method="_on_spikes_3_body_entered"]
@@ -451,3 +556,5 @@ end_point = NodePath("../end point")
 [connection signal="body_entered" from="Area2D2" to="car" method="_on_area_2d_2_body_entered"]
 [connection signal="body_entered" from="spikes4" to="car" method="_on_spikes_4_body_entered"]
 [connection signal="body_entered" from="bomb3" to="car" method="_on_bomb_3_body_entered"]
+[connection signal="body_entered" from="spikes5" to="car" method="_on_spikes_5_body_entered"]
+[connection signal="body_entered" from="blast hole" to="car" method="_on_blast_hole_body_entered"]

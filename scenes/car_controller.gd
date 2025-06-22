@@ -100,3 +100,11 @@ func _on_spikes_4_body_entered(body: Node2D) -> void:
 
 func _on_bomb_3_body_entered(body: Node2D) -> void:
 	get_tree().reload_current_scene()
+
+
+func _on_spikes_5_body_entered(body: Node2D) -> void:
+	get_tree().reload_current_scene()
+
+
+func _on_blast_hole_body_entered(body: Node2D) -> void:
+	get_tree().reload_current_scene()

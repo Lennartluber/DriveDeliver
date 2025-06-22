@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-@export var speed: float = 600
+@export var speed: float = 520
   # Speed of the NPC car
 @export var start_point: Node2D  # Reference to the start point
 @export var end_point: Node2D    # Reference to the end point

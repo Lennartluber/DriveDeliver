@@ -28,5 +28,3 @@ shape = SubResource("RectangleShape2D_3m3sh")
 position = Vector2(0, 0.5)
 rotation = 1.5708
 shape = SubResource("RectangleShape2D_til2w")
-
-[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
