@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://d4cm57vspmiln"]
+[gd_scene load_steps=23 format=3 uid="uid://d4cm57vspmiln"]
 
 [ext_resource type="Texture2D" uid="uid://2ca6w4mgkqsb" path="res://PNG/Ground_Tile_01_C.png" id="1_mxtr1"]
 [ext_resource type="PackedScene" uid="uid://by7pl6dwvmwtg" path="res://PlayerCar.tscn" id="2_mxtr1"]
@@ -16,14 +16,20 @@
 [ext_resource type="PackedScene" uid="uid://c8cf8bm2yydqb" path="res://NPC car.tscn" id="14_xm70n"]
 [ext_resource type="Texture2D" uid="uid://c3mr58v7x2dtg" path="res://PNG/Decor_Items/Container_A.png" id="15_ge7yi"]
 [ext_resource type="PackedScene" uid="uid://chdcb07ohipsr" path="res://scenes/blast_hole.tscn" id="16_xdopa"]
+[ext_resource type="Texture2D" uid="uid://b4j4xquudxhjr" path="res://PNG/Decor_Items/Decor_Pipe_B.png" id="17_fgoxv"]
+[ext_resource type="Texture2D" uid="uid://bjgycfisj1nky" path="res://PNG/Decor_Items/Decor_Pipe_A_01.png" id="18_eqd57"]
+[ext_resource type="Texture2D" uid="uid://cj6pksiuv2mkm" path="res://PNG/Decor_Items/Container_D.png" id="19_w5lph"]
+[ext_resource type="Texture2D" uid="uid://bcdtwxy0hlbcj" path="res://PNG/Decor_Items/Container_B.png" id="20_m8urk"]
+[ext_resource type="Texture2D" uid="uid://c68gu33euie41" path="res://PNG/Decor_Items/Decor_Pipe_C_02.png" id="21_3mvhw"]
+[ext_resource type="Texture2D" uid="uid://bpcsetvc7ifi2" path="res://PNG/Decor_Items/Container_C.png" id="22_c8yxe"]
 
 [node name="Node2D" type="Node2D"]
 
 [node name="TextureRect" type="TextureRect" parent="."]
-offset_left = -497.0
-offset_top = -950.0
-offset_right = 2968.0
-offset_bottom = 2700.0
+offset_left = -505.0
+offset_top = -924.0
+offset_right = 2960.0
+offset_bottom = 2726.0
 texture = ExtResource("1_mxtr1")
 stretch_mode = 1
 
@@ -296,9 +302,6 @@ rotation = 1.5708
 position = Vector2(-494, 2574)
 rotation = 1.5708
 
-[node name="container" parent="Borders" instance=ExtResource("7_xm70n")]
-position = Vector2(1225, 638)
-
 [node name="container2" parent="Borders" instance=ExtResource("7_xm70n")]
 position = Vector2(1649, 1059)
 
@@ -314,9 +317,6 @@ position = Vector2(1480, 933)
 [node name="container6" parent="Borders" instance=ExtResource("7_xm70n")]
 position = Vector2(967, 933)
 
-[node name="container7" parent="Borders" instance=ExtResource("7_xm70n")]
-position = Vector2(1224, 933)
-
 [node name="container8" parent="Borders" instance=ExtResource("7_xm70n")]
 position = Vector2(799, 1059)
 
@@ -325,6 +325,9 @@ position = Vector2(611, 1185)
 
 [node name="container10" parent="Borders" instance=ExtResource("7_xm70n")]
 position = Vector2(564, 1310)
+
+[node name="StaticBody2D" parent="Borders" instance=ExtResource("9_a2f0d")]
+position = Vector2(1225, 638)
 
 [node name="Pipe5" parent="." instance=ExtResource("6_1kh8g")]
 position = Vector2(1373, -836)
@@ -546,6 +549,173 @@ position = Vector2(175, 1059)
 
 [node name="container10" parent="." instance=ExtResource("7_xm70n")]
 position = Vector2(310, 933)
+
+[node name="ContainerA" type="Sprite2D" parent="."]
+position = Vector2(1223, 933)
+texture = ExtResource("15_ge7yi")
+
+[node name="container11" parent="." instance=ExtResource("7_xm70n")]
+position = Vector2(-231, 1311)
+
+[node name="container12" parent="." instance=ExtResource("7_xm70n")]
+position = Vector2(-420, 1376)
+rotation = 1.5708
+
+[node name="container13" parent="." instance=ExtResource("7_xm70n")]
+position = Vector2(2682, 1314)
+
+[node name="container14" parent="." instance=ExtResource("7_xm70n")]
+position = Vector2(2872, 1378)
+rotation = 1.5708
+
+[node name="StaticBody2D19" parent="." instance=ExtResource("9_a2f0d")]
+position = Vector2(1225, 511)
+
+[node name="StaticBody2D20" parent="." instance=ExtResource("9_a2f0d")]
+position = Vector2(970, 576)
+
+[node name="StaticBody2D21" parent="." instance=ExtResource("9_a2f0d")]
+position = Vector2(1480, 575)
+
+[node name="container15" parent="." instance=ExtResource("7_xm70n")]
+position = Vector2(310, 805)
+
+[node name="container16" parent="." instance=ExtResource("7_xm70n")]
+position = Vector2(310, 677)
+
+[node name="container17" parent="." instance=ExtResource("7_xm70n")]
+position = Vector2(310, 550)
+
+[node name="container18" parent="." instance=ExtResource("7_xm70n")]
+position = Vector2(310, 423)
+
+[node name="container19" parent="." instance=ExtResource("7_xm70n")]
+position = Vector2(2142, 808)
+
+[node name="container20" parent="." instance=ExtResource("7_xm70n")]
+position = Vector2(2142, 681)
+
+[node name="container21" parent="." instance=ExtResource("7_xm70n")]
+position = Vector2(2142, 554)
+
+[node name="container22" parent="." instance=ExtResource("7_xm70n")]
+position = Vector2(2142, 427)
+
+[node name="StaticBody2D22" parent="." instance=ExtResource("9_a2f0d")]
+position = Vector2(1140, 1310)
+rotation = 1.5708
+
+[node name="StaticBody2D23" parent="." instance=ExtResource("9_a2f0d")]
+position = Vector2(1270, 1383)
+rotation = 1.5708
+
+[node name="container23" parent="." instance=ExtResource("7_xm70n")]
+position = Vector2(2319, 173)
+
+[node name="container24" parent="." instance=ExtResource("7_xm70n")]
+position = Vector2(2220, 300)
+
+[node name="container25" parent="." instance=ExtResource("7_xm70n")]
+position = Vector2(2405, 46)
+
+[node name="container26" parent="." instance=ExtResource("7_xm70n")]
+position = Vector2(2805, -82)
+
+[node name="container27" parent="." instance=ExtResource("7_xm70n")]
+position = Vector2(2549, -82)
+
+[node name="container28" parent="." instance=ExtResource("7_xm70n")]
+position = Vector2(231, 297)
+
+[node name="container29" parent="." instance=ExtResource("7_xm70n")]
+position = Vector2(133, 171)
+
+[node name="container30" parent="." instance=ExtResource("7_xm70n")]
+position = Vector2(47, 45)
+
+[node name="container31" parent="." instance=ExtResource("7_xm70n")]
+position = Vector2(-100, -81)
+
+[node name="container32" parent="." instance=ExtResource("7_xm70n")]
+position = Vector2(-354, -81)
+
+[node name="DecorPipeB" type="Sprite2D" parent="."]
+position = Vector2(93, 929)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("17_fgoxv")
+
+[node name="DecorPipeB2" type="Sprite2D" parent="."]
+position = Vector2(-86, 929)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("17_fgoxv")
+
+[node name="DecorPipeB3" type="Sprite2D" parent="."]
+position = Vector2(-265, 929)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("17_fgoxv")
+
+[node name="DecorPipeA01" type="Sprite2D" parent="."]
+position = Vector2(-399, 929)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("18_eqd57")
+
+[node name="CzechHdgehogA3" type="Sprite2D" parent="."]
+position = Vector2(-312, 1192)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("12_82ue1")
+
+[node name="CzechHdgehogA4" type="Sprite2D" parent="."]
+position = Vector2(-418, 1187)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("12_82ue1")
+
+[node name="CzechHdgehogA5" type="Sprite2D" parent="."]
+position = Vector2(-210, 1192)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("12_82ue1")
+
+[node name="ContainerD" type="Sprite2D" parent="."]
+position = Vector2(-353, 1050)
+texture = ExtResource("19_w5lph")
+
+[node name="ContainerD2" type="Sprite2D" parent="."]
+position = Vector2(-96, 1050)
+texture = ExtResource("19_w5lph")
+
+[node name="ContainerB" type="Sprite2D" parent="."]
+position = Vector2(-417, 747)
+rotation = 1.5708
+texture = ExtResource("20_m8urk")
+
+[node name="CzechHdgehogA6" type="Sprite2D" parent="."]
+position = Vector2(-302, 838)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("12_82ue1")
+
+[node name="CzechHdgehogA7" type="Sprite2D" parent="."]
+position = Vector2(-168, 839)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("12_82ue1")
+
+[node name="DecorPipeB4" type="Sprite2D" parent="."]
+position = Vector2(-266, 724)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("17_fgoxv")
+
+[node name="DecorPipeC02" type="Sprite2D" parent="."]
+position = Vector2(-132, 724)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("21_3mvhw")
+
+[node name="ContainerC" type="Sprite2D" parent="."]
+position = Vector2(120, 756)
+rotation = 1.5708
+texture = ExtResource("22_c8yxe")
+
+[node name="ContainerC2" type="Sprite2D" parent="."]
+position = Vector2(-7, 756)
+rotation = 1.5708
+texture = ExtResource("22_c8yxe")
 
 [connection signal="body_entered" from="spikes" to="car" method="_on_spikes_body_entered"]
 [connection signal="body_entered" from="spikes2" to="car" method="_on_spikes_2_body_entered"]
