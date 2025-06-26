@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 
 # Car properties
-var max_speed = 300.0        # Maximum speed in pixels per second
+var max_speed = 300        # Maximum speed in pixels per second
 var acceleration = 600.0     # Acceleration rate
 var brake_force = 800.0      # Braking force
 var turn_speed = 3.0         # Rotation speed in radians per second
@@ -107,4 +107,20 @@ func _on_spikes_5_body_entered(body: Node2D) -> void:
 
 
 func _on_blast_hole_body_entered(body: Node2D) -> void:
+	get_tree().reload_current_scene()
+
+
+func _on_blast_hole_2_body_entered(body: Node2D) -> void:
+	get_tree().reload_current_scene()
+
+
+func _on_blast_hole_3_body_entered(body: Node2D) -> void:
+	get_tree().reload_current_scene()
+
+
+func _on_spikes_6_body_entered(body: Node2D) -> void:
+	get_tree().reload_current_scene()
+
+
+func _on_spikes_7_body_entered(body: Node2D) -> void:
 	get_tree().reload_current_scene()

@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://d4cm57vspmiln"]
+[gd_scene load_steps=28 format=3 uid="uid://d4cm57vspmiln"]
 
 [ext_resource type="Texture2D" uid="uid://2ca6w4mgkqsb" path="res://PNG/Ground_Tile_01_C.png" id="1_mxtr1"]
 [ext_resource type="PackedScene" uid="uid://by7pl6dwvmwtg" path="res://PlayerCar.tscn" id="2_mxtr1"]
@@ -22,13 +22,18 @@
 [ext_resource type="Texture2D" uid="uid://bcdtwxy0hlbcj" path="res://PNG/Decor_Items/Container_B.png" id="20_m8urk"]
 [ext_resource type="Texture2D" uid="uid://c68gu33euie41" path="res://PNG/Decor_Items/Decor_Pipe_C_02.png" id="21_3mvhw"]
 [ext_resource type="Texture2D" uid="uid://bpcsetvc7ifi2" path="res://PNG/Decor_Items/Container_C.png" id="22_c8yxe"]
+[ext_resource type="Texture2D" uid="uid://bxkdohlj7ixyq" path="res://PNG/Decor_Items/Puddle_02.png" id="23_7477o"]
+[ext_resource type="Texture2D" uid="uid://clc4on7agksap" path="res://PNG/Decor_Items/Puddle_03.png" id="24_7jc23"]
+[ext_resource type="Texture2D" uid="uid://bpf1ohhkhu2rg" path="res://PNG/Decor_Items/Puddle_04.png" id="25_23l3j"]
+[ext_resource type="Texture2D" uid="uid://tqypqxmxnvv6" path="res://PNG/Decor_Items/Decor_Pipe_A_02.png" id="26_voxdt"]
+[ext_resource type="Texture2D" uid="uid://divtcqcskcgkf" path="res://PNG/Decor_Items/Puddle_01.png" id="27_ifabh"]
 
 [node name="Node2D" type="Node2D"]
 
 [node name="TextureRect" type="TextureRect" parent="."]
-offset_left = -505.0
+offset_left = -507.0
 offset_top = -924.0
-offset_right = 2960.0
+offset_right = 2958.0
 offset_bottom = 2726.0
 texture = ExtResource("1_mxtr1")
 stretch_mode = 1
@@ -717,6 +722,132 @@ position = Vector2(-7, 756)
 rotation = 1.5708
 texture = ExtResource("22_c8yxe")
 
+[node name="Puddle02" type="Sprite2D" parent="."]
+position = Vector2(-306, 494)
+texture = ExtResource("23_7477o")
+
+[node name="Puddle03" type="Sprite2D" parent="."]
+position = Vector2(-182, 582)
+texture = ExtResource("24_7jc23")
+
+[node name="Puddle04" type="Sprite2D" parent="."]
+position = Vector2(-109, 480)
+texture = ExtResource("25_23l3j")
+
+[node name="CzechHdgehogA8" type="Sprite2D" parent="."]
+position = Vector2(-413, 368)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("12_82ue1")
+
+[node name="CzechHdgehogA9" type="Sprite2D" parent="."]
+position = Vector2(-300, 372)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("12_82ue1")
+
+[node name="ContainerD3" type="Sprite2D" parent="."]
+position = Vector2(119, 497)
+rotation = 1.5708
+texture = ExtResource("19_w5lph")
+
+[node name="ContainerC3" type="Sprite2D" parent="."]
+position = Vector2(-21, 296)
+texture = ExtResource("22_c8yxe")
+
+[node name="DecorPipeB5" type="Sprite2D" parent="."]
+position = Vector2(-121, 170)
+texture = ExtResource("17_fgoxv")
+
+[node name="DecorPipeA02" type="Sprite2D" parent="."]
+position = Vector2(-312, 170)
+texture = ExtResource("26_voxdt")
+
+[node name="Puddle01" type="Sprite2D" parent="."]
+position = Vector2(-181, 59)
+texture = ExtResource("27_ifabh")
+
+[node name="CzechHdgehogA10" type="Sprite2D" parent="."]
+position = Vector2(-415, 40)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("12_82ue1")
+
+[node name="blast hole2" parent="." instance=ExtResource("16_xdopa")]
+position = Vector2(1437, 1070)
+
+[node name="blast hole3" parent="." instance=ExtResource("16_xdopa")]
+position = Vector2(1015, 1065)
+
+[node name="container33" parent="." instance=ExtResource("7_xm70n")]
+position = Vector2(1227, 130)
+
+[node name="container34" parent="." instance=ExtResource("7_xm70n")]
+position = Vector2(1482, 78)
+
+[node name="container35" parent="." instance=ExtResource("7_xm70n")]
+position = Vector2(972, 78)
+
+[node name="container36" parent="." instance=ExtResource("7_xm70n")]
+position = Vector2(1227, 3)
+
+[node name="container37" parent="." instance=ExtResource("7_xm70n")]
+position = Vector2(1603, -48)
+
+[node name="container38" parent="." instance=ExtResource("7_xm70n")]
+position = Vector2(852, -48)
+
+[node name="container39" parent="." instance=ExtResource("7_xm70n")]
+position = Vector2(1726, -174)
+
+[node name="container40" parent="." instance=ExtResource("7_xm70n")]
+position = Vector2(731, -174)
+
+[node name="container41" parent="." instance=ExtResource("7_xm70n")]
+position = Vector2(1849, -300)
+
+[node name="container42" parent="." instance=ExtResource("7_xm70n")]
+position = Vector2(609, -299)
+
+[node name="spikes6" parent="." instance=ExtResource("8_a2f0d")]
+position = Vector2(1983, 35)
+
+[node name="spikes7" parent="." instance=ExtResource("8_a2f0d")]
+position = Vector2(473, 57)
+
+[node name="container43" parent="." instance=ExtResource("7_xm70n")]
+position = Vector2(1415, -112)
+rotation = 1.5708
+
+[node name="container44" parent="." instance=ExtResource("7_xm70n")]
+position = Vector2(1540, -239)
+rotation = 1.5708
+
+[node name="container45" parent="." instance=ExtResource("7_xm70n")]
+position = Vector2(1665, -364)
+rotation = 1.5708
+
+[node name="container46" parent="." instance=ExtResource("7_xm70n")]
+position = Vector2(1854, -427)
+
+[node name="container47" parent="." instance=ExtResource("7_xm70n")]
+position = Vector2(1227, -123)
+
+[node name="container48" parent="." instance=ExtResource("7_xm70n")]
+position = Vector2(1041, -113)
+rotation = 1.5708
+
+[node name="container49" parent="." instance=ExtResource("7_xm70n")]
+position = Vector2(916, -238)
+rotation = 1.5708
+
+[node name="container50" parent="." instance=ExtResource("7_xm70n")]
+position = Vector2(794, -364)
+rotation = 1.5708
+
+[node name="container51" parent="." instance=ExtResource("7_xm70n")]
+position = Vector2(606, -425)
+
+[node name="container52" parent="." instance=ExtResource("7_xm70n")]
+position = Vector2(1227, -250)
+
 [connection signal="body_entered" from="spikes" to="car" method="_on_spikes_body_entered"]
 [connection signal="body_entered" from="spikes2" to="car" method="_on_spikes_2_body_entered"]
 [connection signal="body_entered" from="spikes3" to="car" method="_on_spikes_3_body_entered"]
@@ -728,3 +859,7 @@ texture = ExtResource("22_c8yxe")
 [connection signal="body_entered" from="bomb3" to="car" method="_on_bomb_3_body_entered"]
 [connection signal="body_entered" from="spikes5" to="car" method="_on_spikes_5_body_entered"]
 [connection signal="body_entered" from="blast hole" to="car" method="_on_blast_hole_body_entered"]
+[connection signal="body_entered" from="blast hole2" to="car" method="_on_blast_hole_2_body_entered"]
+[connection signal="body_entered" from="blast hole3" to="car" method="_on_blast_hole_3_body_entered"]
+[connection signal="body_entered" from="spikes6" to="car" method="_on_spikes_6_body_entered"]
+[connection signal="body_entered" from="spikes7" to="car" method="_on_spikes_7_body_entered"]
