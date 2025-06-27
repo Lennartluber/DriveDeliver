@@ -436,7 +436,7 @@ scale = Vector2(1.2, 1.2)
 metadata/_edit_group_ = true
 
 [node name="bomb2" parent="." instance=ExtResource("13_1kh8g")]
-position = Vector2(1593, 2323)
+position = Vector2(1644, 2371)
 rotation = 1.5708
 metadata/_edit_group_ = true
 
@@ -848,6 +848,12 @@ position = Vector2(606, -425)
 [node name="container52" parent="." instance=ExtResource("7_xm70n")]
 position = Vector2(1227, -250)
 
+[node name="blast hole4" parent="." instance=ExtResource("16_xdopa")]
+position = Vector2(639, 437)
+
+[node name="blast hole5" parent="." instance=ExtResource("16_xdopa")]
+position = Vector2(1816, 477)
+
 [connection signal="body_entered" from="spikes" to="car" method="_on_spikes_body_entered"]
 [connection signal="body_entered" from="spikes2" to="car" method="_on_spikes_2_body_entered"]
 [connection signal="body_entered" from="spikes3" to="car" method="_on_spikes_3_body_entered"]
@@ -863,3 +869,5 @@ position = Vector2(1227, -250)
 [connection signal="body_entered" from="blast hole3" to="car" method="_on_blast_hole_3_body_entered"]
 [connection signal="body_entered" from="spikes6" to="car" method="_on_spikes_6_body_entered"]
 [connection signal="body_entered" from="spikes7" to="car" method="_on_spikes_7_body_entered"]
+[connection signal="body_entered" from="blast hole4" to="car" method="_on_blast_hole_4_body_entered"]
+[connection signal="body_entered" from="blast hole5" to="car" method="_on_blast_hole_5_body_entered"]
