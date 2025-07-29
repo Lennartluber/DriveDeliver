@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://by7pl6dwvmwtg"]
+[gd_scene load_steps=5 format=3 uid="uid://by7pl6dwvmwtg"]
 
 [ext_resource type="Script" uid="uid://bbajokkhlljkf" path="res://scenes/car_controller.gd" id="1_mfh7n"]
 [ext_resource type="Texture2D" uid="uid://l66rsvpg5ms3" path="res://2D TOP DOWN PIXEL CARS/Coupe/coupe_red.png" id="2_j28rr"]
@@ -6,6 +6,10 @@
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_epypp"]
 radius = 29.0
 height = 150.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_mfh7n"]
+radius = 26.0474
+height = 146.934
 
 [node name="car" type="CharacterBody2D" groups=["Player"]]
 z_index = 6
@@ -23,3 +27,11 @@ position = Vector2(0.25, 0.25)
 rotation = 1.57079
 scale = Vector2(2, 1.98)
 texture = ExtResource("2_j28rr")
+
+[node name="Area2D" type="Area2D" parent="."]
+rotation = 1.5708
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CapsuleShape2D_mfh7n")
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]

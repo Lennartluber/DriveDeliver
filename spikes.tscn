@@ -1,11 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://xpfbbmd5hrq7"]
+[gd_scene load_steps=2 format=3 uid="uid://xpfbbmd5hrq7"]
 
-[ext_resource type="Script" uid="uid://wbivb43sp2ui" path="res://scenes/spikes.gd" id="1_nrdsm"]
 [ext_resource type="Texture2D" uid="uid://bhfbe8uepit8s" path="res://PNG/Decor_Items/Czech_Hdgehog_A.png" id="2_8fhau"]
 
-[node name="spikes" type="Area2D"]
+[node name="spikes" type="Area2D" groups=["Death"]]
 scale = Vector2(0.5, 0.5)
-script = ExtResource("1_nrdsm")
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="."]

@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://cjyflou6sv6b6"]
+
+[ext_resource type="Script" uid="uid://b702e8efa1k1a" path="res://np_ccar_2.gd" id="1_gb30x"]
+[ext_resource type="Texture2D" uid="uid://bvco2e0ny7xn6" path="res://2D TOP DOWN PIXEL CARS/Truck/truck_cream.png" id="2_rb4ot"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nk0an"]
+size = Vector2(29, 74)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4xjwi"]
+size = Vector2(34, 78)
+
+[node name="NPCcar2" type="CharacterBody2D"]
+script = ExtResource("1_gb30x")
+metadata/_edit_group_ = true
+
+[node name="Area2D" type="Area2D" parent="." groups=["Death"]]
+
+[node name="Sprite2D" type="Sprite2D" parent="Area2D"]
+texture = ExtResource("2_rb4ot")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-0.5, 0)
+shape = SubResource("RectangleShape2D_nk0an")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 1)
+shape = SubResource("RectangleShape2D_4xjwi")

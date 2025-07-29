@@ -70,65 +70,8 @@ func _on_puddle_slip_body_exited(body: Node2D) -> void:
 	controlling = true
 
 
-func _on_spikes_body_entered(body: Node2D) -> void:
-	get_tree().reload_current_scene()
 
 
-func _on_spikes_2_body_entered(body: Node2D) -> void:
-	get_tree().reload_current_scene()
-
-
-func _on_spikes_3_body_entered(body: Node2D) -> void:
-	get_tree().reload_current_scene()
-
-
-func _on_area_2d_body_entered(body: Node2D) -> void:
-	get_tree().reload_current_scene()
-
-
-func _on_area_2d_2_body_entered(body: Node2D) -> void:
-	get_tree().reload_current_scene()
-
-
-func _on_bomb_2_body_entered(body: Node2D) -> void:
-	get_tree().reload_current_scene()
-
-
-func _on_spikes_4_body_entered(body: Node2D) -> void:
-	get_tree().reload_current_scene()
-
-
-func _on_bomb_3_body_entered(body: Node2D) -> void:
-	get_tree().reload_current_scene()
-
-
-func _on_spikes_5_body_entered(body: Node2D) -> void:
-	get_tree().reload_current_scene()
-
-
-func _on_blast_hole_body_entered(body: Node2D) -> void:
-	get_tree().reload_current_scene()
-
-
-func _on_blast_hole_2_body_entered(body: Node2D) -> void:
-	get_tree().reload_current_scene()
-
-
-func _on_blast_hole_3_body_entered(body: Node2D) -> void:
-	get_tree().reload_current_scene()
-
-
-func _on_spikes_6_body_entered(body: Node2D) -> void:
-	get_tree().reload_current_scene()
-
-
-func _on_spikes_7_body_entered(body: Node2D) -> void:
-	get_tree().reload_current_scene()
-
-
-func _on_blast_hole_4_body_entered(body: Node2D) -> void:
-	get_tree().reload_current_scene()
-
-
-func _on_blast_hole_5_body_entered(body: Node2D) -> void:
-	get_tree().reload_current_scene()
+func _on_area_2d_area_entered(area: Area2D) -> void:
+	if area.is_in_group("Death"):
+		get_tree().reload_current_scene()

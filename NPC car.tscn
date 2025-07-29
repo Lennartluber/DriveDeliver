@@ -3,11 +3,11 @@
 [ext_resource type="Script" uid="uid://drrvsxykootsd" path="res://npc_car.gd" id="1_3m3sh"]
 [ext_resource type="Texture2D" uid="uid://dghkgphjunxmh" path="res://2D TOP DOWN PIXEL CARS/Truck/truck_blue.png" id="1_rn0le"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_3m3sh"]
-size = Vector2(36, 79)
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_til2w"]
 size = Vector2(36, 79)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3m3sh"]
+size = Vector2(59.1304, 24.7826)
 
 [node name="NPCcar" type="CharacterBody2D"]
 scale = Vector2(2.3, 2.3)
@@ -17,14 +17,13 @@ script = ExtResource("1_3m3sh")
 rotation = 1.5708
 texture = ExtResource("1_rn0le")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 0.5)
-rotation = 1.5708
-shape = SubResource("RectangleShape2D_3m3sh")
-
-[node name="Area2D" type="Area2D" parent="."]
+[node name="Area2D" type="Area2D" parent="." groups=["Death"]]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(0, 0.5)
 rotation = 1.5708
 shape = SubResource("RectangleShape2D_til2w")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.434783, 0.652174)
+shape = SubResource("RectangleShape2D_3m3sh")
