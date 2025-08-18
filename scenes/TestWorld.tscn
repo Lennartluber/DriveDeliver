@@ -1,5 +1,6 @@
-[gd_scene load_steps=33 format=3 uid="uid://d4cm57vspmiln"]
+[gd_scene load_steps=35 format=3 uid="uid://d4cm57vspmiln"]
 
+[ext_resource type="Script" uid="uid://dfna7rry6vugr" path="res://scenes/LevelManager.gd" id="1_djwk2"]
 [ext_resource type="Texture2D" uid="uid://2ca6w4mgkqsb" path="res://PNG/Ground_Tile_01_C.png" id="1_mxtr1"]
 [ext_resource type="PackedScene" uid="uid://by7pl6dwvmwtg" path="res://PlayerCar.tscn" id="2_mxtr1"]
 [ext_resource type="Script" uid="uid://mg353le61aqf" path="res://scenes/camera_2d.gd" id="4_21yxg"]
@@ -33,13 +34,17 @@
 [ext_resource type="Texture2D" uid="uid://c7fgp46b8a43f" path="res://2D TOP DOWN PIXEL CARS/Truck/trailer.png" id="31_ifabh"]
 [ext_resource type="PackedScene" uid="uid://cjyflou6sv6b6" path="res://np_ccar_2.tscn" id="32_eq6r1"]
 
-[node name="Node2D" type="Node2D"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_t7d68"]
+size = Vector2(219, 298)
+
+[node name="Level1" type="Node2D"]
+script = ExtResource("1_djwk2")
 
 [node name="TextureRect" type="TextureRect" parent="."]
-offset_left = -3237.0
-offset_top = -3209.0
-offset_right = 5799.0
-offset_bottom = 5332.0
+offset_left = -3029.0
+offset_top = -3059.0
+offset_right = 6007.0
+offset_bottom = 5482.0
 texture = ExtResource("1_mxtr1")
 stretch_mode = 1
 
@@ -112,10 +117,6 @@ position = Vector2(1220, 1885)
 
 [node name="container11" parent="Containers" instance=ExtResource("7_xm70n")]
 position = Vector2(1541, 2636)
-
-[node name="ContainerA" type="Sprite2D" parent="Containers"]
-position = Vector2(1476, 1880)
-texture = ExtResource("15_ge7yi")
 
 [node name="Borders" type="Node2D" parent="."]
 
@@ -560,10 +561,6 @@ position = Vector2(175, 1059)
 [node name="container10" parent="." instance=ExtResource("7_xm70n")]
 position = Vector2(310, 933)
 
-[node name="ContainerA" type="Sprite2D" parent="."]
-position = Vector2(1223, 933)
-texture = ExtResource("15_ge7yi")
-
 [node name="container11" parent="." instance=ExtResource("7_xm70n")]
 position = Vector2(-230, 1311)
 
@@ -848,7 +845,7 @@ position = Vector2(794, -364)
 rotation = 1.5708
 
 [node name="container51" parent="." instance=ExtResource("7_xm70n")]
-position = Vector2(606, -425)
+position = Vector2(605, -424)
 
 [node name="container52" parent="." instance=ExtResource("7_xm70n")]
 position = Vector2(1227, -250)
@@ -860,10 +857,10 @@ position = Vector2(639, 437)
 position = Vector2(1816, 477)
 
 [node name="StaticBody2D24" parent="." instance=ExtResource("9_a2f0d")]
-position = Vector2(-111, -628)
+position = Vector2(655, -552)
 
 [node name="StaticBody2D25" parent="." instance=ExtResource("9_a2f0d")]
-position = Vector2(-111, -500)
+position = Vector2(349, -425)
 
 [node name="StaticBody2D26" parent="." instance=ExtResource("9_a2f0d")]
 position = Vector2(2479, -626)
@@ -887,7 +884,7 @@ position = Vector2(2362, -72)
 position = Vector2(70, -429)
 
 [node name="spikes11" parent="." instance=ExtResource("8_a2f0d")]
-position = Vector2(-430, -841)
+position = Vector2(-259, -661)
 
 [node name="DecorPipeB6" type="Sprite2D" parent="."]
 position = Vector2(2595, 1207)
@@ -1001,7 +998,7 @@ position = Vector2(2732, 330)
 texture = ExtResource("15_ge7yi")
 
 [node name="Truck3" parent="." instance=ExtResource("30_voxdt")]
-position = Vector2(1960, 880)
+position = Vector2(2554, 382)
 rotation = 0.0
 
 [node name="Truck4" parent="." instance=ExtResource("30_voxdt")]
@@ -1019,7 +1016,7 @@ position = Vector2(1228, 238)
 [node name="Area2D4" parent="." groups=["Death"] instance=ExtResource("11_21yxg")]
 position = Vector2(2880, -189)
 
-[node name="NPCcar2" parent="." node_paths=PackedStringArray("start_point", "end_point") instance=ExtResource("32_eq6r1")]
+[node name="NPCcar2" parent="." node_paths=PackedStringArray("start_point", "end_point") groups=["Death"] instance=ExtResource("32_eq6r1")]
 position = Vector2(1854, 1593)
 rotation = 4.71239
 scale = Vector2(2.3, 2.3)
@@ -1032,11 +1029,11 @@ position = Vector2(2022, 1601)
 [node name="end point npc car 2" type="Node2D" parent="."]
 position = Vector2(1226, 1619)
 
-[node name="NPCcar3" parent="." node_paths=PackedStringArray("start_point", "end_point") instance=ExtResource("32_eq6r1")]
-position = Vector2(272, -244)
+[node name="NPCcar3" parent="." node_paths=PackedStringArray("start_point", "end_point") groups=["Death"] instance=ExtResource("32_eq6r1")]
+position = Vector2(341, -239)
 rotation = 4.71239
 scale = Vector2(2.3, 2.3)
-speed = 500.0
+speed = 450.0
 start_point = NodePath("../start point3")
 end_point = NodePath("../end point3")
 
@@ -1046,6 +1043,30 @@ position = Vector2(365, -235)
 [node name="end point3" type="Node2D" parent="."]
 position = Vector2(-355, -239)
 
+[node name="FinishArea" type="Area2D" parent="."]
+position = Vector2(1231, -725)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FinishArea"]
+position = Vector2(-6.5, -21)
+shape = SubResource("RectangleShape2D_t7d68")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="TimerLabel" type="Label" parent="CanvasLayer"]
+unique_name_in_owner = true
+offset_left = 78.0
+offset_top = 33.0
+offset_right = 274.0
+offset_bottom = 116.0
+theme_override_font_sizes/font_size = 60
+text = "TIMER:"
+
+[node name="StaticBody2D30" parent="." instance=ExtResource("9_a2f0d")]
+position = Vector2(1225, 934)
+
+[node name="StaticBody2D31" parent="." instance=ExtResource("9_a2f0d")]
+position = Vector2(1475, 1882)
+
 [connection signal="body_entered" from="Area2D" to="car" method="_on_area_2d_body_entered"]
 [connection signal="body_entered" from="Area2D2" to="car" method="_on_area_2d_2_body_entered"]
 [connection signal="body_entered" from="blast hole" to="car" method="_on_blast_hole_body_entered"]
@@ -1053,3 +1074,4 @@ position = Vector2(-355, -239)
 [connection signal="body_entered" from="blast hole3" to="car" method="_on_blast_hole_3_body_entered"]
 [connection signal="body_entered" from="blast hole4" to="car" method="_on_blast_hole_4_body_entered"]
 [connection signal="body_entered" from="blast hole5" to="car" method="_on_blast_hole_5_body_entered"]
+[connection signal="body_entered" from="FinishArea" to="car" method="_on_finish_body_entered"]

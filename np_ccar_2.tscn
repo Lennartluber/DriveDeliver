@@ -4,10 +4,10 @@
 [ext_resource type="Texture2D" uid="uid://bvco2e0ny7xn6" path="res://2D TOP DOWN PIXEL CARS/Truck/truck_cream.png" id="2_rb4ot"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nk0an"]
-size = Vector2(29, 74)
+size = Vector2(32, 78)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4xjwi"]
-size = Vector2(34, 78)
+size = Vector2(27, 72)
 
 [node name="NPCcar2" type="CharacterBody2D"]
 script = ExtResource("1_gb30x")
@@ -19,9 +19,8 @@ metadata/_edit_group_ = true
 texture = ExtResource("2_rb4ot")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(-0.5, 0)
 shape = SubResource("RectangleShape2D_nk0an")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 1)
+position = Vector2(-0.5, 0)
 shape = SubResource("RectangleShape2D_4xjwi")
